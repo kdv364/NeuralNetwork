@@ -72,10 +72,11 @@ public class NeuralNetwork : MonoBehaviour
             Debug.Log("List information:");
             Debug.Log("List length: " + LearningList.Count);
             foreach (LearningData item in LearningList)
-            {
-                intresting_number+=" "+item.result;
-            }
-            Debug.Log("List content:" + intresting_number);
+            //{
+                //intresting_number+=" "+item.result;
+            //}
+            Debug.Log(LearningList.Aggregate("",(total, i)=>total+" "+i.result));
+            //Debug.Log("List content:" + intresting_number);
         }
 
         if (Input.GetKeyDown (KeyCode.R))
